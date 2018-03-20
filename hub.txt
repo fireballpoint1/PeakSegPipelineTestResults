@@ -1,0 +1,6 @@
+
+hub input
+shortLabel input
+longLabel input
+genomesFile genomes.txt
+email email@domain.com

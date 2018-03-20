@@ -1,0 +1,83 @@
+<title>PeakSegFPOP + PeakSegJoint predictions</title>
+<h2>Output: predicted peaks</h2>
+<ul>
+<li>
+13 genomic regions were found to have
+at least one sample with a peak
+(<a href="hub.txt">track hub</a>,
+ <a href="peaks_summary.tsv">peaks_summary.tsv</a>).
+</li>
+
+<li>15 peaks were detected overall, across 2 samples.</li>
+<li>Peak presence/absence matrices:
+ <a href="peaks_matrix_sample.tsv.gz">(regions x samples)</a>,
+ <a href="peaks_matrix_group.tsv.gz">(regions x groups)</a>,
+</li>
+<li><a href="peaks_matrix_meanCoverage.tsv.gz">Peak raw height matrix (regions x samples)</a>, mean coverage in peak, which is not comparable between samples, but is useful for plotting the segment mean on top of the raw coverage/count data,</li>
+<li><a href="peaks_matrix_normHeight.tsv.gz">Peak normalized height matrix (regions x samples)</a>, log10(mean coverage in peak/mean coverage in background on the same sample), which is comparable between samples,</li>
+<li><a href="peaks_matrix_likelihood.tsv.gz">Peak log-likelihood increase matrix (regions x samples)</a> -- useful for ranking peaks (e.g. taking top 100 in each sample) -- wider and taller peaks are more likely, and have larger values in this matrix -- technically the values are computed as: nll_1 - nll_3, where nll_k is the negative log likelihood of the model with k segments (nll_1 is the model with one segment, no peak; nll_3 is the model with a peak, three segments, one change up and one change down).</li>
+
+</ul>
+<h2>Input: labeled genomic windows</h2>
+0 labeled genomic windows (chunks) were defined in 1 label file(s):
+<a href="labels/some_labels.txt">labels/some_labels.txt</a>
+
+<h2>Input: genomic segmentation problems</h2>
+1 problems were defined in <a href="problems.bed">problems.bed</a>
+<!-- html table generated in R 3.4.3 by xtable 1.8-2 package -->
+<!-- Tue Mar 20 12:26:18 2018 -->
+<table border=1>
+<tr> <th>  </th> <th> problem </th> <th> peak.regions </th> <th> peak.samples </th> <th> labeled.regions </th> <th> labels </th>  </tr>
+  <tr> <td align="right"> 1 </td> <td> <a href="http://genome.ucsc.edu/cgi-bin/hgTracks?position=chr10:18024675-38818835">chr10:18024675-38818835</a> </td> <td align="right">  13 </td> <td align="right">  15 </td> <td align="right">  19 </td> <td align="right">  38 </td> </tr>
+   </table>
+
+<h2>Output: predicted group-specific peaks</h2>
+<p>These are great candidates for re-labeling.</p>
+<h3>Input</h3>
+<p>0 genomic regions were predicted to have a common peak in the Input group, and no peaks in other groups.</p>
+
+<p>0 genomic regions were predicted to have no peaks in the Input group, with a peak in all other groups.</p>
+
+<h3>kidney</h3>
+<p>11 genomic regions were predicted to have a common peak in the kidney group, and no peaks in other groups.</p>
+<!-- html table generated in R 3.4.3 by xtable 1.8-2 package -->
+<!-- Tue Mar 20 12:26:18 2018 -->
+<table border=1>
+<tr> <th>  </th> <th> peak </th> <th> peakBases </th> <th> group.loss.diff </th>  </tr>
+  <tr> <td align="right"> 1 </td> <td> 
+<a href="http://genome.ucsc.edu/cgi-bin/hgTracks?position=chr10:32773007-34312217">chr10:32773007-34312217</a>
+ </td> <td align="right"> 153921 </td> <td align="right"> 840017.28 </td> </tr>
+  <tr> <td align="right"> 2 </td> <td> 
+<a href="http://genome.ucsc.edu/cgi-bin/hgTracks?position=chr10:35351801-36286471">chr10:35351801-36286471</a>
+ </td> <td align="right"> 93467 </td> <td align="right"> 431388.24 </td> </tr>
+  <tr> <td align="right"> 3 </td> <td> 
+<a href="http://genome.ucsc.edu/cgi-bin/hgTracks?position=chr10:34909522-35761652">chr10:34909522-35761652</a>
+ </td> <td align="right"> 85213 </td> <td align="right"> 316212.36 </td> </tr>
+  <tr> <td align="right"> 4 </td> <td> 
+<a href="http://genome.ucsc.edu/cgi-bin/hgTracks?position=chr10:38061747-38593327">chr10:38061747-38593327</a>
+ </td> <td align="right"> 53158 </td> <td align="right"> 276453.61 </td> </tr>
+  <tr> <td align="right"> 5 </td> <td> 
+<a href="http://genome.ucsc.edu/cgi-bin/hgTracks?position=chr10:32998350-33410950">chr10:32998350-33410950</a>
+ </td> <td align="right"> 41260 </td> <td align="right"> 231115.93 </td> </tr>
+  <tr> <td align="right"> 6 </td> <td> 
+<a href="http://genome.ucsc.edu/cgi-bin/hgTracks?position=chr10:38098611-38398421">chr10:38098611-38398421</a>
+ </td> <td align="right"> 29981 </td> <td align="right"> 159700.62 </td> </tr>
+  <tr> <td align="right"> 7 </td> <td> 
+<a href="http://genome.ucsc.edu/cgi-bin/hgTracks?position=chr10:35035892-35885382">chr10:35035892-35885382</a>
+ </td> <td align="right"> 84949 </td> <td align="right"> 117554.48 </td> </tr>
+  <tr> <td align="right"> 8 </td> <td> 
+<a href="http://genome.ucsc.edu/cgi-bin/hgTracks?position=chr10:37974200-38284570">chr10:37974200-38284570</a>
+ </td> <td align="right"> 31037 </td> <td align="right"> 116432.41 </td> </tr>
+  <tr> <td align="right"> 9 </td> <td> 
+<a href="http://genome.ucsc.edu/cgi-bin/hgTracks?position=chr10:38510437-38923827">chr10:38510437-38923827</a>
+ </td> <td align="right"> 41339 </td> <td align="right"> 98650.08 </td> </tr>
+  <tr> <td align="right"> 10 </td> <td> 
+<a href="http://genome.ucsc.edu/cgi-bin/hgTracks?position=chr10:38278394-38513824">chr10:38278394-38513824</a>
+ </td> <td align="right"> 23543 </td> <td align="right"> 97988.81 </td> </tr>
+  <tr> <td align="right"> 11 </td> <td> 
+<a href="http://genome.ucsc.edu/cgi-bin/hgTracks?position=chr10:38639193-38656323">chr10:38639193-38656323</a>
+ </td> <td align="right"> 1713 </td> <td align="right"> 19682.83 </td> </tr>
+   </table>
+
+<p>0 genomic regions were predicted to have no peaks in the kidney group, with a peak in all other groups.</p>
+
