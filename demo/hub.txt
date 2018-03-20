@@ -1,0 +1,6 @@
+
+hub demo
+shortLabel demo
+longLabel demo
+genomesFile genomes.txt
+email email@domain.com
